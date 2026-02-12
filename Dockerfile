@@ -1,6 +1,6 @@
-FROM node:20-bookworm-slim
+FROM node:20-bookworm
 
-# Install git + your media packages **first** (this fixes the git spawn error)
+# Install git and system packages FIRST - no slim, full base to avoid surprises
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     git \
@@ -9,23 +9,20 @@ RUN apt-get update && \
     webp \
     && rm -rf /var/lib/apt/lists/*
 
-# Working directory
 WORKDIR /usr/src/app
 
-# Copy package files only (for caching)
+# Copy package files
 COPY package*.json ./
 
-# Install project dependencies
+# Install dependencies (git is already there)
 RUN npm install
 
-# Install global packages (now git is present)
+# Install global tools
 RUN npm install -g qrcode-terminal pm2
 
-# Copy all other files
+# Copy everything else
 COPY . .
 
-# Your port
 EXPOSE 5000
 
-# Start command
 CMD ["npm", "start"]
