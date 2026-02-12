@@ -1,4 +1,4 @@
-l# Modern Node.js base (no old buster problems)
+# Modern Node.js base (no old buster problems)
 FROM node:20-bookworm-slim
 
 # Install git - this fixes the npm git spawn error
