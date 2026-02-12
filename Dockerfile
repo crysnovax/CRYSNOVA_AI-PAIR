@@ -1,9 +1,10 @@
-# Use current Node.js LTS + modern Debian (Bookworm = Debian 12)
+# Modern Node 20 on Debian Bookworm (current stable)
 FROM node:20-bookworm-slim
 
-# Install required system packages (ffmpeg, imagemagick, webp)
+# Install git + your system packages in one layer
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+    git \
     ffmpeg \
     imagemagick \
     webp \
@@ -12,18 +13,20 @@ RUN apt-get update && \
 # Set working directory
 WORKDIR /usr/src/app
 
-# Copy package.json first (better caching)
-COPY package.json .
+# Copy package files first
+COPY package*.json ./
 
-# Install npm dependencies + global tools
-RUN npm install && \
-    npm install -g qrcode-terminal pm2
+# Install project dependencies
+RUN npm install
 
-# Copy the rest of your application code
+# Install global tools (now git is available)
+RUN npm install -g qrcode-terminal pm2
+
+# Copy the rest of the code
 COPY . .
 
-# Expose the port your app listens on (you had 5000)
+# Expose your port
 EXPOSE 5000
 
-# Start command (same as yours)
+# Start the app
 CMD ["npm", "start"]
