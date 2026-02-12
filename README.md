@@ -1,4 +1,4 @@
-# 🚀 Malvin-Session-Generator
+# 🚀 CRYSN⚉VA-AI-Session-Generator
 
 ## 📊 Visitor Counter
 
@@ -53,12 +53,12 @@ Generate session IDs for WhatsApp bots using [`@whiskeysockets/baileys`](https:/
 ## 👑 Owner
 
 <p align="center">
-  <a href="https://github.com/XdKing2">
-    <img src="https://github.com/XdKing2.png" width="200" height="200" alt="Malvin King"/>
+  <a href="https://github.com/crysnovax">
+    <img src="https://i.ibb.co/pBrzZDQj/20260212-111751.jpg" width="200" height="200" alt="Malvin King"/>
   </a>
 </p>
 
-📬 [`Contact on WhatsApp`](https://wa.me/263780166288)
+📬 [`Contact on WhatsApp`](https://wa.me/2348077528901)
 
 ---
 
