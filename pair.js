@@ -77,34 +77,34 @@ var randomItem = selectRandomItem(items);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
                         let md = "malvin~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hey there, MALVIN-XD User!* 👋🏻
+                        let desc = `✨ Welcome to CRYSNOVA AI! 👋🏻
 
-Thanks for using *MALVIN-XD* — your session has been successfully created!
+Your session has been created successfully.
 
 🔐 *Session ID:* Sent above  
-⚠️ *Keep it safe!* Do NOT share this ID with anyone.
+⚠️ Keep it private — never share it with anyone.
 
-——————
+━━━━━━━━━━━━━━
 
-*✅ Stay Updated:*  
+📢 *Stay Updated*  
 Join our official WhatsApp Channel:  
-https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
+https://whatsapp.com/channel/0029Vb6pe77K0IBn48HLKb38
 
-*💻 Source Code:*  
-Fork & explore the project on GitHub:  
-https://github.com/XdKing2/MALVIN-XD
+💻 *Open Source Project*  
+Fork, star, and explore on GitHub:  
+https://github.com/crysnovax/CRYSNOVA_AI-PAIR
 
-——————
+━━━━━━━━━━━━━━
 
-> *© Powered by Malvin King*
-Stay cool and hack smart. ✌🏻`; 
+© Powered by crysnovax  
+Stay cool. Build smart. 🚀`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "ᴍᴀʟᴠɪɴ-xᴅ",
-thumbnailUrl: "https://files.catbox.moe/bqs70b.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A",
+title: "CRYSNOVA AI",
+thumbnailUrl: "https://i.ibb.co/pBrzZDQj/20260212-111751.jpg",
+sourceUrl: "https://whatsapp.com/channel/0029Vb6pe77K0IBn48HLKb38",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
@@ -113,9 +113,9 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `Hey there, MALVIN-XD User!* 👋🏻
+                            let desc = `Hey there, CRYSNOVA AI User!* 👋🏻
 
-Thanks for using *MALVIN-XD* — your session has been successfully created!
+Thanks for using *CRYSNOVA PAIR* — your session has been successfully created!
 
 🔐 *Session ID:* Sent above  
 ⚠️ *Keep it safe!* Do NOT share this ID with anyone.
@@ -124,15 +124,15 @@ Thanks for using *MALVIN-XD* — your session has been successfully created!
 
 *✅ Stay Updated:*  
 Join our official WhatsApp Channel:  
-https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
+https://whatsapp.com/channel/0029Vb6pe77K0IBn48HLKb38
 
 *💻 Source Code:*  
 Fork & explore the project on GitHub:  
-https://github.com/XdKing2/MALVIN-XD
+https://github.com/crysnovax/CRYSNOVA_AI-PAIR
 
 ——————
 
-> *© Powered by Malvin King*
+> *© Powered by crysnovax*
 Stay cool and hack smart. ✌🏻`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
