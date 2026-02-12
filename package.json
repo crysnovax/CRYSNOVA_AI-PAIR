@@ -1,7 +1,6 @@
 {
   "name": "crysnova-ai",
   "version": "1.0.0",
-  "description": "CRYSNOVA AI - Advanced WhatsApp Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -11,15 +10,11 @@
     "@anthropic-ai/sdk": "^0.32.1",
     "@hapi/boom": "^10.0.1",
     "axios": "^1.7.9",
-    "body-parser": "^1.20.3",
     "chalk": "^4.1.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "file-type": "^16.5.4",
     "form-data": "^4.0.1",
-    "megajs": "^1.1.7",
-    "node-cache": "^5.1.2",
-    "phone": "^3.1.53",
     "pino": "^8.21.0",
     "qrcode-terminal": "^0.12.0"
   },
