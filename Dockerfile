@@ -1,6 +1,8 @@
 # Modern Node.js base (no old buster problems)
 FROM node:20-bookworm-slim
-
+RUN npm config set registry https://registry.npmjs.org/ \
+    && npm config set fetch-retries 5 \
+    && npm config set fetch-retry-mintimeout 20000
 # Install git - this fixes the npm git spawn error
 RUN apt-get update && apt-get install -y --no-install-recommends git \
     && rm -rf /var/lib/apt/lists/*
