@@ -1,7 +1,6 @@
-# Modern Node 20 on Debian Bookworm (current stable)
 FROM node:20-bookworm-slim
 
-# Install git + your system packages in one layer
+# Install git + your packages in one step (this is the key)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     git \
@@ -10,23 +9,18 @@ RUN apt-get update && \
     webp \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
 WORKDIR /usr/src/app
 
-# Copy package files first
 COPY package*.json ./
 
-# Install project dependencies
+# Install project deps
 RUN npm install
 
-# Install global tools (now git is available)
+# Install global tools (now git exists)
 RUN npm install -g qrcode-terminal pm2
 
-# Copy the rest of the code
 COPY . .
 
-# Expose your port
 EXPOSE 5000
 
-# Start the app
 CMD ["npm", "start"]
